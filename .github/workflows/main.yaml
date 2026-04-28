@@ -86,9 +86,9 @@ jobs:
         run: |
           docker pull $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
-      - name: Stop and remove container if running
+      - name: Stop and remove existing container
         run: |
-          docker ps -q --filter "name=langsmith-app" | grep -q . && docker stop langsmith-app && docker rm -fv langsmith-app || true
+          docker rm -fv langsmith-app 2>/dev/null || true
 
       - name: Run Docker Image to serve users
         env:
