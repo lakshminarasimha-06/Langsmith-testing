@@ -1,0 +1,12 @@
+openai 
+langsmith 
+python-dotenv
+langchain 
+langchain-openai 
+langgraph 
+langsmith 
+python-dotenv 
+duckduckgo-search 
+wikipedia
+langchain-core
+langchain-community 
